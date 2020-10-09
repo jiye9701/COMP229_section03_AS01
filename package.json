@@ -1,7 +1,6 @@
 {
   "name": "assignment1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +12,17 @@
   "author": "Jiye Yu",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "index.js": "0.0.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiye9701/COMP220_WK02.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jiye9701/COMP220_WK02/issues"
+  },
+  "homepage": "https://github.com/jiye9701/COMP220_WK02#readme",
+  "description": ""
 }
