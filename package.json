@@ -1,28 +1,20 @@
 {
   "name": "assignment1",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "engines": {
-    "node": "^12.18.3",
-    "npm": "6.0.0"
+    "node":"^12.8.3",
+    "npm": "^6.0.0"
   },
-  "author": "Jiye Yu",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "index.js": "0.0.3"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jiye9701/COMP220_WK02.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jiye9701/COMP220_WK02/issues"
-  },
-  "homepage": "https://github.com/jiye9701/COMP220_WK02#readme",
-  "description": ""
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  }
 }
