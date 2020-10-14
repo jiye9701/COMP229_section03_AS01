@@ -1,60 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
+<%- include('./partials/header.ejs') -%>
+<%- include('./partials/mainnav.ejs') -%>
 
-    <!-- CSS Section-->
-    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel='stylesheet' href='/Content/app.css' />
-  </head>
-  <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">COMP 229</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+<main class="container">
 
-          <li class="nav-item active">
-            <a class="nav-link" href="/home"><i class="fas fa-home"></i>Home </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/about"><i class="fas fa-info"></i>About </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/products"><i class="fas fa-cogs"></i>Products </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/services"><i class="fas fa-map-signs"></i>Services </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/contact"><i class="fas fa-phone"></i>Contact </a>
-          </li>
+  <div class="row">
+    <div class="col">
+      <div class="jumbotron">
+        <h1 class="h1"><%= title %></h1>
 
-          
-        </ul>
-        
+      
       </div>
-    </nav>
-
-    <div class="jumbotron">
-      <h1 class="display-4"><%= title %></h1>
-      <p class="lead">Welcome to <%= title %> </p>
-      <hr class="my-4">
-    
     </div>
+  </div>
 
+  <div class="row justify-content-md-center">
+    <div class="col-6">
+    <!--h2 class="h2">Welcome to <%= title %> </h2-->
+    <!--hr class="my-4"-->
+  </div>
+</div>
 
+<!-- Additional Content goes here-->
 
+<div style="text-align: center;">
+  <h3>Thank you for visiting the homepage.
+    <br> I hope you get the information you want through the menu at the top bar.&nbsp;
+    Especially, there is a game under the projects menu, hoping you enjoy it ! ☺︎
+  </h3>
+  </div>
+  
+</main>
 
-    <!--JavaScript Section-->
-    <script src = "./jquery/dist/iquery.min.js"></script>
-    <scipt src="./bootstrap/disy/js/bootstrap.min.js"></scipt>
-    <script src ="./Scripts/app"></script>
-
-  </body>
-</html>
+<%- include('./partials/bottomnav.ejs') -%>
+<%- include('./partials/footer.ejs') -%>

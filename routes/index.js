@@ -1,3 +1,6 @@
+//Created by: Jiye Yu - Student Nr.:301116244 Created on Oct 09, 2020
+//COMP229_assignment1_301116244 Jiye Yu
+
 var express = require('express');
 var router = express.Router();
 
@@ -12,22 +15,22 @@ router.get('/home', function(req, res, next){
 });
 
 /*Get home page. */
-router.get('/products', function(req, res, next){
-  res.render('index', { title: 'Products'});
+router.get('/projects', function(req, res, next){
+  res.render('projects', { title: 'Projects'});
 });
 
 /*Get services page. */
 router.get('/services', function(req, res, next){
-  res.render('index', { title: 'Services'});
+  res.render('services', { title: 'Services', message: 'We are offering:'});
 });
 
 /*Get about page. */
 router.get('/about', function(req, res, next){
-  res.render('index', { title: 'About'});
+  res.render('about', { title: 'About Me'});
 });
 
 /*Get contact page. */
 router.get('/contact', function(req, res, next){
-  res.render('index', { title: 'Contact'});
+  res.render('contact', { title: 'Contact Me', message: 'Contact Me' });
 });
 module.exports = router;
