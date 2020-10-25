@@ -34,7 +34,16 @@ router.get('/component-list', function(req, res, next){
   /* POST preocess the Add page */
   router.get('/add', (req, res, next) =>
   {
+    let component = Componenet({
+      "partID":req.body.partID,
+      "name":req.body.name,
+      "description":req.body.description,
+      "price": req.body.price
+    });
 
+    console.log(component);
+
+    res.redirect('/componenet-list');
   });
 
 
