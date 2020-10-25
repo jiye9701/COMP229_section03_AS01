@@ -1,12 +1,17 @@
 //Created by: Jiye Yu - Student Nr.:301116244 Created on Oct 09, 2020
 //COMP229_assignment1_301116244 Jiye Yu
 
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+
+let mongoose = require('mongoose');
+
+let Component = require('../models/component');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'Welcome Home' });
 });
 
 /*Get home page. */
@@ -14,7 +19,7 @@ router.get('/home', function(req, res, next){
   res.render('index', { title: 'Home'});
 });
 
-/*Get home page. */
+/*Get projects page. */
 router.get('/projects', function(req, res, next){
   res.render('projects', { title: 'Projects'});
 });
@@ -31,6 +36,10 @@ router.get('/about', function(req, res, next){
 
 /*Get contact page. */
 router.get('/contact', function(req, res, next){
-  res.render('contact', { title: 'Contact Me', message: 'Contact Me' });
+  res.render('contact', { title: 'Contact', message: 'Contact Me' });
 });
+
+
+
+
 module.exports = router;

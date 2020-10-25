@@ -4,7 +4,6 @@
 
 (function(){
 
-
     function Start()
     {
         console.log("App Started...");
@@ -15,7 +14,6 @@
             let cancelButton = document.getElementById("cancelButton");
             let form = document.forms[0];
 
-
             sendButton.addEventListener("click", (event) => {
                 event.preventDefault();
 
@@ -24,13 +22,11 @@
                 let emailAddress = document.getElementById("emailAddress").value;
                 let message = document.getElementById("message").value;
 
-
                 console.info(`Full Name: ${fullName}
                 Contact Number: ${contactNumber}
                 Email Address :${emailAddress}
                 Message       :${message}`);
 
-                
                 form.reset();
             });
 

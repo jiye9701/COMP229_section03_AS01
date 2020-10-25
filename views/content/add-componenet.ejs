@@ -1,0 +1,43 @@
+<div class = "row justify-content-md-center">
+
+    <div class = "col-8">
+
+
+<!--Form goes here-->
+
+<form method="POST">
+    <div class="form-group">
+      <label for="partID">partIDs</label>
+      <input type="text" class="form-control" id="partID" aria-describedby="partID"
+      name="partID" placeholder="Enter componenet part ID"
+      required>
+    </div>
+
+    <div class="form-group">
+        <label for="name">Componenet Name</label>
+        <input type="text" class="form-control" id="name" aria-describedby="name"
+        name="name" placeholder="Enter componenet Name"
+        required>
+      </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" rows="3" name ="description"
+      placeholder="Enter the Component Description" required></textarea>
+    </div>
+
+
+    <div class="form-group">
+        <label for="price">Price</label>
+      <input type="text" class="form-control" id="price" aria-describedby="price"
+      name="partID" placeholder="Enter componenet price"
+      required>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-plus-circle"></i> Add Component</button>
+            <a href="/component-list" class="btn btn-warning btn-lg"><i class="fas fa-undo"></i> Cancel</a>
+  </form>
+
+
+        </div>
+        </div>

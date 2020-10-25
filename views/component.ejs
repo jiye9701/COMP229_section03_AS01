@@ -1,0 +1,20 @@
+<%- include('./partials/header.ejs') -%>
+<%- include('./partials/mainnav.ejs') -%>
+
+<div class="container">
+        <div class="jumbotron">
+          <h1 class="h1"><%= title %></h1>
+  
+        
+        </div>
+
+        <% if(title == 'Component List'){ %>
+        <%- include('./content/component-list.ejs') -%>
+    <% } else if (title == 'Add Component'){ %>
+      <%- include('./content/add-component.ejs') -%>
+  <% } %>
+
+</div>
+
+<%- include('./partials/bottomnav.ejs') -%>
+<%- include('./partials/footer.ejs') -%>

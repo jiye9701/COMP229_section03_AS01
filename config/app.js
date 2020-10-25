@@ -5,11 +5,34 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
 let indexRouter = require('../routes/index');
+let componentRouter = require('../routes/component');
 let usersRouter = require('../routes/users');
 
 let app = express();
 
 let mongoose = require('mongoose');
+let DB = require('./DB');
+
+mongoose.connect(DB.URL, {useNewUrlParser: true, useUnifiedTopology: true});
+
+let dbConnection = mongoose.connection; //alias
+
+dbConnection.on('error', console.error.bind(console, 'connection error:'));
+dbConnection.once('open', ()=>{
+  console.log('MongoDB Connection OPEN');
+});
+
+dbConnection.once('connected', ()=>{
+  console.log('MongoDB Connected');
+});
+
+dbConnection.on('disconnected', ()=>{
+  console.log('MongoDB Disconnected');
+});
+
+dbConnection.on('reconnected', ()=>{
+  console.log('MongoDB Reconnected');
+});
 
 // view engine setup
 app.set('../views', path.join(__dirname, 'views'));
@@ -22,6 +45,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 app.use('/', indexRouter);
+app.use('component-list', componentRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
